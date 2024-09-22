@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+interface IQLSV{
+    void add(SinhVienCNTT sv)
+    void printInfo
+}
+class QLSV
+class SinhVienCNTT{
+    - String ten, queQuan
+    - int tuoi
+}
+class SinhVienCNTT_CLC
+SinhVienCNTT <|-- SinhVienCNTT_CLC
+IQLSV <|.. QLSV
+QLSV o-> "list" SinhVienCNTT
+@enduml
