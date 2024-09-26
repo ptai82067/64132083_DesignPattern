@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+interface ITinh{
+tinh(float a, float b)
+}
+class contex{
+tinhToan : ITinh
+setTinhToan(TinhToan): void
+tinh(float a, float b)
+}
+
+class Cong{
+tinh(float a, float b)
+}
+class Tru{
+tinh(float a, float b)
+}
+
+
+class Nhan{
+tinh(float a, float b)
+}
+class Chia{
+tinh(float a, float b)
+}
+contex o--> "Strategy" ITinh
+ITinh <|..Cong
+ITinh <|..Tru
+ITinh <|..Nhan
+ITinh <|..Chia
+@enduml

@@ -1,5 +1,5 @@
 package thuchanh.stratery.cc2;
 
-public interface ISoSanh {
-  int soSanh(SinhVien o1, SinhVien o2);
+public interface ISoSanh<T> {
+  int soSanh(T o1,T o2);
 }
