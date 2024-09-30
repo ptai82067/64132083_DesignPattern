@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class BuilderHoaDonHeader{
+    #maHoaDon
+    #ngayBan
+    #tenKhachHang
+    BuilderHoaDonHeader builderMaHD(String maHoaDon)
+    BuilderHoaDonHeader buildNgayBan(Date ngayBan)
+    BuilderHoaDonHeader buildTenKachHang(String tenKhachHang)
+    HoaDonHeader build()
+}
+class HoaDonHeader{
+    #maHoaDon
+    #ngayBan
+    #tenKhachHang
+    #HoaDonHeader(BuilderHoaDonHeader buildHD)
+}
+class CTHD{
+    #sanPham
+    #soLuong
+    #donGia
+    #chietKhau
+    #CTHD(BuilderCTHD buildCTHD)
+}
+class BuilderCTHD{
+    #sanPham
+    #soLuong
+    #donGia
+    #chietKhau
+    BuilderCTHD buildSanPham(String sanPham)
+    BuilderCTHD buildSoLuong(int soLuong)
+    BuilderCTHD buildDonGia(float donGia)
+    BuilderCTHD buildChietKhau(float chietKhau)
+    CTHD build()
+}
+class BuilderHoaDon{
+    HoaDonHeader hdhd
+    ArrayList<CTHD> listHD
+    BuilderHoaDon buildHDHeader(HoaDonHeader hd)
+    BuilderHoaDon addCTHD(CTHD cthd)
+    HoaDon build()
+}
+class HoaDon{
+    CTHD cthd
+    HoaDonHeader hdhd
+    # HoaDon(BuilderHoaDon b)
+    String toString()
+}
+BuilderHoaDonHeader..> HoaDonHeader
+BuilderCTHD..> CTHD
+CTHD --> HoaDon
+HoaDonHeader --> HoaDon
+BuilderHoaDon..> HoaDon
+
+@enduml
