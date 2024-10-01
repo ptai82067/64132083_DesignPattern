@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface IHinhThucKhienMai{
+}
+interface IHinhThucThanhToan{
+}
+class KhienMaiThang11{
+}
+class ThanhToanAirPay{
+}
+class ThanhToanOCD{
+}
+class GioHang{
+
+}
+class MatHang{
+}
+IHinhThucKhienMai <|-- KhienMaiThang11
+IHinhThucThanhToan <|-- ThanhToanAirPay
+IHinhThucThanhToan <|-- ThanhToanOCD
+GioHang --> IHinhThucThanhToan
+GioHang --> IHinhThucKhienMai
+GioHang o-->"list"MatHang
+@enduml

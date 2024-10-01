@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Product{
+    - String maSanPham, tenSanPham
+    - int soLuong
+    - float donGia
+}
+class DataAccess{
+    - ArrayList<Product> listProduct
+    - {static} DataAccess instances
+    - DataAccess()
+    + {static} DataAccess getInstances()
+    + addProduct(Procduct p)
+    + removeProduct(String maSanPham)
+    + updateProduct(String maSanPham, String tenSanPham,
+     int soLuong, float donGia)
+}
+DataAccess *-->"List "Product
+@enduml

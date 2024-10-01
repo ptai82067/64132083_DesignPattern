@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class Builder{
+    String str
+    + Builder addString(String s)
+    + Builder addFloat(float f)
+    + Builder addBool(boolean b)
+}
+class MyStringBuilder{
+    String str
+    # MyStringBuilder(Builder b)
+    void toString()
+}
+Builder..>MyStringBuilder
+@enduml
