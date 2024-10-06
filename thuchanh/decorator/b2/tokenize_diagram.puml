@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+abstract class XuLyChuoi{
+    # String str
+    # ArrayList<String> dsTu
+    + {abstract} ArrayList<String> tachChuoi()
+    + void hienThi()
+}
+class Decorator{
+    # XuLyChuoi xuLyChuoi
+    + Decorator (XulyChuoi xuLyChuoi)
+}
+Tokenize --|> XuLyChuoi
+Decorator --|> XuLyChuoi
+LoaiBoTuDung --|> Decorator
+LoaiBoDauCau --|> Decorator
+@enduml

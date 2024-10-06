@@ -5,6 +5,10 @@ public class Rectangle extends Shape{
     super(brush, paper, frame);
   }
 
+  public Rectangle() {
+    super("","","");
+  }
+
   @Override
   public String draw() {
     return "Brush Rectangle is: "+this.getBrush()

@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Book{
+    String tuaDe
+    int soTrang
+    String tacGia
+    List<String> chuong
+    - Book(Builder b)
+    + toString()
+}
+class Builder{
+    String tuaDe
+    int soTrang
+    String tacGia
+    List<String> chuong
+    Builder buildTuaDe(String tuaDe)
+    Builder buildSoTrang(int soTrang)
+    Builder buildTacGia(String tacGia)
+    Builder buildChuong(List<String> chuong)
+    Book build()
+}
+Builder ..>Book
+
+@enduml

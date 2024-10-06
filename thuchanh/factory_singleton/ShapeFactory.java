@@ -12,13 +12,13 @@ public class ShapeFactory {
     System.out.println("frame of "+shapeType.toString());
     String frame = scanner.nextLine();
     switch (shapeType){
-      case Rectangle -> {
+      case RECTANGLE -> {
         return Rectangle.getInstance(shapeType, new Rectangle(brush,paper,frame));
       }
-      case Triangle -> {
+      case TRIANGLE -> {
         return Triangle.getInstance(shapeType, new Triangle(brush,paper,frame));
       }
-      case Circle -> {
+      case CIRCLE -> {
         return  Circle.getInstance(shapeType,new Circle(brush,paper,frame));
       }
     }

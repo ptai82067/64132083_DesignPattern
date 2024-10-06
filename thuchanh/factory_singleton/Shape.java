@@ -22,11 +22,27 @@ public abstract class Shape {
   }
 
   public static Shape getInstance(ShapeType type, Shape shape) {
+
     if(!instance.containsKey(type)){
       instance.put(type,shape);
+
     }
+    // if (type == ShapeType.REC){
+    //    instance.put(type,new Rec(,,,))
+    //}
     return instance.get(type);
   }
+//public static Shape getInstance(ShapeType type) {
+//   if (type == ShapeType.RECTANGLE){
+//
+//     if(!instance.containsKey(type)){
+//
+//       instance.put(type,new Rectangle());
+//
+//     }
+//  }
+//  return instance.get(type);
+//}
 
 
   public String getFrame() {

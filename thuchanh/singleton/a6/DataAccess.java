@@ -14,7 +14,6 @@ public class DataAccess {
   public static DataAccess getInstance(String name){
     if(!instances.containsKey(name)){
       instances.put(name,new DataAccess());
-
     }
     return instances.get(name);
   }

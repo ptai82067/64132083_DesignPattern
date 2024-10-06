@@ -8,9 +8,9 @@ class Product{
 }
 class DataAccess{
     - ArrayList<Product> listProduct
-    - {static} DataAccess instances
+    - {static} Map<String,DataAccess> instances
     - DataAccess()
-    + {static} DataAccess getInstances()
+    + {static} DataAccess getInstances(String tag)
     + addProduct(Procduct p)
     + removeProduct(String maSanPham)
     + updateProduct(String maSanPham, String tenSanPham,
