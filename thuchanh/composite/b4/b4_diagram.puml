@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface SubjectComponent{
+    String getTreeSubject(int depth)
+    int getTotalCredits()
+    int getTuitionFees()
+}
+class SubjectLeaf{
+    - String name
+    - int credits
+}
+class SubjectComposite{
+    - String name
+    ArrayList<SubjectComponent> items
+    void addItem()
+    void removeItem()
+}
+
+SubjectLeaf -|>SubjectComponent
+SubjectComposite --|> SubjectComponent
+@enduml
